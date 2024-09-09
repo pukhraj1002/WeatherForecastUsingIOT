@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="top-controls">
+        <button id="theme-toggle" title="Toggle Dark Mode">&#9790;</button>
+        <div class="language-selector">
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
+        <button id="map-open" title="Open Google Maps" onclick="window.open('https://maps.google.com', '_blank')">&#127760;</button>
+    </div>
+    <div class="container">
+        <h1>Weather Monitoring Dashboard</h1>
+        <div class="graph-container">
+            <iframe src="https://thingspeak.com/channels/2650408/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=line" frameborder="0"></iframe>
+            <iframe src="https://thingspeak.com/channels/2650408/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line" frameborder="0"></iframe>
+            <iframe src="https://thingspeak.com/channels/2650408/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Pressure&type=line" frameborder="0"></iframe>
+            <iframe src="https://thingspeak.com/channels/2650408/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Rain+Level&type=line" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
