@@ -1,11 +1,11 @@
 // Toggle dark/light mode
-document.getElementById('theme-toggle').addEventListener('click', function() {
+document.getElementById('theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
-// Handle language changes (placeholder, not functional)
-document.getElementById('language').addEventListener('change', function() {
-    let lang = this.value;
-    alert('Language changed to: ' + (lang === 'en' ? 'English' : 'हिन्दी'));
-    // Implement actual language change functionality here
+// Language change handler (mock function)
+document.getElementById('language').addEventListener('change', (event) => {
+    const lang = event.target.value;
+    alert(`Language changed to: ${lang === 'en' ? 'English' : 'हिन्दी'}`);
+    // Add functionality to actually change language content here
 });
