@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('/BG.jpg');
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     background-color: #e0f7fa;
     transition: background-color 0.3s, color 0.3s;
