@@ -2,30 +2,29 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/BG.jpg');
+    background: url('/BG.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
     background-color: #e0f7fa;
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .top-controls {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     display: flex;
     gap: 10px;
     align-items: center;
+    z-index: 1;
 }
 
 button {
     background: #00796b;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 8px;
     padding: 10px 15px;
@@ -41,16 +40,18 @@ button:hover {
 .language-selector {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 16px;
+    color: #333;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-top: 80px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border-radius: 12px;
     text-align: center;
     backdrop-filter: blur(10px);
@@ -59,18 +60,19 @@ button:hover {
 h1 {
     color: #00796b;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-.graph-container {
+.graph-container, .value-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 iframe {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     width: 100%;
     max-width: 450px;
@@ -80,7 +82,7 @@ iframe {
 
 iframe:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Greenish glow effect */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -90,14 +92,4 @@ iframe:hover {
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode .container {
-    background: rgba(33, 33, 33, 0.9);
-}
-
-body.dark-mode h1 {
-    color: #e0e0e0;
-}
+    background-color: #121
