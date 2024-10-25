@@ -8,30 +8,32 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="top-controls">
-        <button id="theme-toggle" title="Toggle Dark Mode">&#9790;</button>
+    <header class="top-controls">
+        <button id="theme-toggle" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">&#9790;</button>
         <div class="language-selector">
             <label for="language">Language:</label>
-            <select id="language">
+            <select id="language" aria-label="Select Language">
                 <option value="en">English</option>
                 <option value="hi">हिन्दी</option>
             </select>
         </div>
-        <button id="map-open" title="Open Google Maps" onclick="window.open('https://maps.google.com', '_blank')">&#127760;</button>
-    </div>
-    <div class="container">
+        <button id="map-open" title="Open Google Maps" aria-label="Open Google Maps" onclick="window.open('https://maps.google.com', '_blank')">&#127760;</button>
+    </header>
+    
+    <main class="container">
         <h1>Weather Monitoring Dashboard</h1>
-        <div class="graph-container">
-            <iframe src="https://thingspeak.com/channels/2650408/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=line" frameborder="0"></iframe>
-            <iframe src="https://thingspeak.com/channels/2650408/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line" frameborder="0"></iframe>
-            <iframe src="https://thingspeak.com/channels/2650408/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Rain+Level&type=line" frameborder="0"></iframe>
-        </div>
-        <div class="value-container">
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2650408/widgets/950839"></iframe>
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2650408/widgets/950840"></iframe>
-            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2650408/widgets/950842"></iframe>
-        </div>
         
-    </div>
+        <section class="graph-container" aria-label="Weather Data Graphs">
+            <iframe src="https://thingspeak.com/channels/2650408/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=line" frameborder="0" aria-label="Temperature Graph"></iframe>
+            <iframe src="https://thingspeak.com/channels/2650408/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line" frameborder="0" aria-label="Humidity Graph"></iframe>
+            <iframe src="https://thingspeak.com/channels/2650408/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Rain Level&type=line" frameborder="0" aria-label="Rain Level Graph"></iframe>
+        </section>
+        
+        <section class="value-container" aria-label="Weather Data Widgets">
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2650408/widgets/950839" aria-label="Temperature Widget"></iframe>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2650408/widgets/950840" aria-label="Humidity Widget"></iframe>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2650408/widgets/950842" aria-label="Rain Level Widget"></iframe>
+        </section>
+    </main>
 </body>
 </html>
